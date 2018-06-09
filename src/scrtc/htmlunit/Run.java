@@ -10,15 +10,15 @@ public class Run {
 
 	public static void main(String[] args) throws MalformedURLException, IOException {
 		
-		WebClient webClient = new WebClient(BrowserVersion.CHROME);
+		WebClient client = new WebClient(BrowserVersion.CHROME);
 
-		HtmlPage page = webClient.getPage("http://htmlunit.sourceforge.net");
+		HtmlPage page = client.getPage("https://www.uol.com.br");
 
         String pageAsXml = page.asXml();
         
         System.out.println(pageAsXml);
         
-        webClient.close();
+        client.close();
 		
 	}
 
